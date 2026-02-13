@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Asal | Valentine 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+    <div id="login-overlay">
+        <div class="login-box">
+            <div class="login-header">
+                <span class="heart-icon">❤️</span>
+                <p>Welcome, My Love</p>
+                <h2>Enter Our Secret Key</h2>
+            </div>
+            <div class="login-form">
+                <input type="password" id="password-input" placeholder="Pass-key..." autofocus>
+                <button id="login-btn">Open Our World</button>
+                <p id="login-error" class="hidden">My heart says that's not it. Try again, Asal.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <canvas id="bg-canvas"></canvas>
+
+        <nav class="navbar">
+            <div class="logo">Hamid & Asal</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" data-nav="hero" class="active">Home</a></li>
+                <li><a href="#" data-nav="story">Our Story</a></li>
+                <li><a href="#" data-nav="memories">Memories</a></li>
+                <li><a href="#" data-nav="gift">Gift</a></li>
+                <li><a href="#" data-nav="message">Message</a></li>
+            </ul>
+        </nav>
+
+        <main id="app">
+            <section id="hero" class="active">
+                <div class="content">
+                    <h1 class="reveal-text">To My Everything, <span class="accent">Asal</span></h1>
+                    <p class="reveal-text shadow">This Valentines is specialized for you.</p>
+                    <button class="cta scroll-btn" data-target="story">Begin Journey</button>
+                </div>
+            </section>
+
+            <section id="story">
+                <div class="content left story-container">
+                    <h2 class="reveal-text">Where Destiny Led Me</h2>
+                    <div class="reveal-text story-text">
+                        <p><span class="color-blue">Since the dawn of my memory, I have been searching for a girl who
+                                existed only in my dreams—a vision that haunted my days and whispered to my heart at
+                                night.
+                                I called her my <strong>ملکه رویا هایم</strong>... the Queen who ruled my silent
+                                world.</span></p>
+                        <p><span class="color-gold">I crossed paths with many, yet my heart remained restless,
+                                ever-searching. Then, destiny took hold and brought me to Pakistan—a land I never
+                                imagined
+                                visiting. It was there, in the most unexpected of places, that I finally found you, the
+                                love
+                                of my life.</span></p>
+                        <p><span class="color-pink">I never dreamed that a lifetime of seeking would culminate in the
+                                simple
+                                quietude of an English classroom.</span></p>
+                        <p><span class="color-rose">The moment I stepped inside and saw you, my soul spoke your name. My
+                                heart didn't just beat; it raced with the thunder of recognition—because my heart knew
+                                you
+                                long before my eyes ever fell upon you. I am so deeply blessed to have found you, my
+                                beautiful Asal.</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="memories">
+                <div class="content">
+                    <h2 class="reveal-text">Our Memories</h2>
+                    <div class="gallery">
+                        <div class="memory-card" id="memory-1"><span>Our Special Moments</span></div>
+                        <div class="memory-card" id="memory-2"><span>Our Special Moments</span></div>
+                        <div class="memory-card" id="memory-3"><span>Our Special Moments</span></div>
+                        <div class="memory-card" id="memory-4"><span>Our Special Moments</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gift">
+                <div class="content center">
+                    <h2 class="reveal-text">Something Special</h2>
+                    <p class="reveal-text">I have a little surprise waiting for you, Asal.</p>
+                    <button class="cta gift-btn">A Gift For You</button>
+                </div>
+            </section>
+
+            <section id="message">
+                <div class="content center">
+                    <h2 class="reveal-text">My Promise</h2>
+                    <p class="reveal-text">I love you more than words can express. Happy Valentine's Day, my beautiful
+                        Asal.
+                    </p>
+                    <p class="signature">- With Love, Hamid</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal for Video Gift -->
+        <div id="gift-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="video-container">
+                    <video id="gift-video" controls playsinline preload="auto">
+                        <source src="11.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="loader-wrapper">
+            <div class="loader"></div>
+            <p>Creating Our 3D World...</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
